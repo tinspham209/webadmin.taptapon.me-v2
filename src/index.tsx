@@ -2,7 +2,7 @@ import { ConnectedRouter } from 'connected-react-router';
 import 'react-awesome-lightbox/build/style.css';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { HashRouter, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import MainAppNavigator from './containers';
 import createStore from './redux/store';
 import './scss/styles.scss';
@@ -12,9 +12,9 @@ const { store, history } = createStore();
 ReactDOM.render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
-      <HashRouter basename="/">
+      <Router>
         <Route component={MainAppNavigator} />
-      </HashRouter>
+      </Router>
     </ConnectedRouter>
   </Provider>,
   document.getElementById('root'),
