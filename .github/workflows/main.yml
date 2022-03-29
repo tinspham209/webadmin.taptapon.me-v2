@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: install dependencies
-        run: npm install
+        run: npm install --global yarn && yarn
       - name: Deploy
         run: npm run deploy --m "Deploy Webadmin to Github Pages"
       - name: Slack notification
