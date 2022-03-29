@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/webadmin.taptapon.me-v2/static/css/main.fa71fe62.chunk.css",
-    "main.js": "/webadmin.taptapon.me-v2/static/js/main.3af1a018.chunk.js",
-    "main.js.map": "/webadmin.taptapon.me-v2/static/js/main.3af1a018.chunk.js.map",
+    "main.css": "/webadmin.taptapon.me-v2/static/css/main.937bae39.chunk.css",
+    "main.js": "/webadmin.taptapon.me-v2/static/js/main.df354772.chunk.js",
+    "main.js.map": "/webadmin.taptapon.me-v2/static/js/main.df354772.chunk.js.map",
     "runtime-main.js": "/webadmin.taptapon.me-v2/static/js/runtime-main.a78acde9.js",
     "runtime-main.js.map": "/webadmin.taptapon.me-v2/static/js/runtime-main.a78acde9.js.map",
     "static/css/2.ea672df8.chunk.css": "/webadmin.taptapon.me-v2/static/css/2.ea672df8.chunk.css",
-    "static/js/2.2343f31d.chunk.js": "/webadmin.taptapon.me-v2/static/js/2.2343f31d.chunk.js",
-    "static/js/2.2343f31d.chunk.js.map": "/webadmin.taptapon.me-v2/static/js/2.2343f31d.chunk.js.map",
+    "static/js/2.23338c4f.chunk.js": "/webadmin.taptapon.me-v2/static/js/2.23338c4f.chunk.js",
+    "static/js/2.23338c4f.chunk.js.map": "/webadmin.taptapon.me-v2/static/js/2.23338c4f.chunk.js.map",
     "3bc629d5f743a1772f7a775c5f5fb0c1.js": "/webadmin.taptapon.me-v2/3bc629d5f743a1772f7a775c5f5fb0c1.js",
     "3bc629d5f743a1772f7a775c5f5fb0c1.js.LICENSE.txt": "/webadmin.taptapon.me-v2/3bc629d5f743a1772f7a775c5f5fb0c1.js.LICENSE.txt",
     "index.html": "/webadmin.taptapon.me-v2/index.html",
     "static/css/2.ea672df8.chunk.css.map": "/webadmin.taptapon.me-v2/static/css/2.ea672df8.chunk.css.map",
-    "static/css/main.fa71fe62.chunk.css.map": "/webadmin.taptapon.me-v2/static/css/main.fa71fe62.chunk.css.map",
-    "static/js/2.2343f31d.chunk.js.LICENSE.txt": "/webadmin.taptapon.me-v2/static/js/2.2343f31d.chunk.js.LICENSE.txt",
+    "static/css/main.937bae39.chunk.css.map": "/webadmin.taptapon.me-v2/static/css/main.937bae39.chunk.css.map",
+    "static/js/2.23338c4f.chunk.js.LICENSE.txt": "/webadmin.taptapon.me-v2/static/js/2.23338c4f.chunk.js.LICENSE.txt",
     "static/media/styles.scss": "/webadmin.taptapon.me-v2/static/media/icomoon.c4e47e8e.woff",
     "static/media/background.ebcb9160.svg": "/webadmin.taptapon.me-v2/static/media/background.ebcb9160.svg",
     "static/media/empty-icon.06149b03.svg": "/webadmin.taptapon.me-v2/static/media/empty-icon.06149b03.svg",
@@ -24,8 +24,8 @@
   "entrypoints": [
     "static/js/runtime-main.a78acde9.js",
     "static/css/2.ea672df8.chunk.css",
-    "static/js/2.2343f31d.chunk.js",
-    "static/css/main.fa71fe62.chunk.css",
-    "static/js/main.3af1a018.chunk.js"
+    "static/js/2.23338c4f.chunk.js",
+    "static/css/main.937bae39.chunk.css",
+    "static/js/main.df354772.chunk.js"
   ]
 }
