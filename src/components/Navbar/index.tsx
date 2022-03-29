@@ -33,7 +33,7 @@ const Navbar: React.FC<Props> = ({ showNavbar, user, collapseSidebar, isAuthenti
   if (!showNavbar) return null;
 
   const getUserName = () => {
-    if (!user?.email) return 'Anonymous';
+    if (!user?.email) return 'Anonymous User';
     return user.displayName || user.email;
   };
 
