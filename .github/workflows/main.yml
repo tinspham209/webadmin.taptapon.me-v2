@@ -34,7 +34,7 @@ jobs:
 
       - name: Push notification to Slack channel
         id: slack
-        uses: slackapi/slack-github-action@v1.16.0
+        uses: slackapi/slack-github-action@v1.18.0
         with:
           payload: '{"blocks":[{"type":"section","text":{"type":"mrkdwn","text":"You have a new request action: "}},{"type":"section","fields":[{"type":"mrkdwn","text":"*Action:* Deploy to PROD"},{"type":"mrkdwn","text":"*Status:* SUCCEEDED!"},{"type":"mrkdwn","text":"*Project:* webadmin.taptapon.me-v2"},{"type":"mrkdwn","text":"*Domain:* www.webadmin.taptapon.me"}]}]}'
         env:
