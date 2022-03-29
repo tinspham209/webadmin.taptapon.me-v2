@@ -2,6 +2,7 @@ import { all } from 'redux-saga/effects';
 import { API } from './../services';
 /* ------------- Sagas ------------- */
 import authSaga from './authRedux/saga';
+import ordersSaga from './ordersRedux/saga';
 import userSaga from './userRedux/saga';
 
 /* ------------- API ------------- */
@@ -19,5 +20,5 @@ const api = withMockApis
 /* ------------- Connect Types To Sagas ------------- */
 
 export default function* root() {
-  yield all([...authSaga(api), ...userSaga(api)]);
+  yield all([...authSaga(api), ...userSaga(api), ...ordersSaga(api)]);
 }

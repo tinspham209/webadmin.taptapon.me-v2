@@ -8,8 +8,8 @@
 ### S.O.S
 
 in file: `src\appConfig\paths.ts`
-- In localhost: change `deployDomain` to `/`
-- When merge to branch `master` (deployment), pls make sure `deployDomain = 'webadmin.taptapon.me-v2'` 
+- In localhost: change `deployDomain` to `empty string`
+- When merge to branch `master` (deployment), pls make sure `deployDomain = '/webadmin.taptapon.me-v2'` 
 
 ### Commit
 

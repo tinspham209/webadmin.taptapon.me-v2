@@ -13,7 +13,6 @@ import BurgerButton from './BurgerButton';
 import './styles.scss';
 
 const Navbar: React.FC<Props> = ({ showNavbar, user, collapseSidebar, isAuthenticated, onSignOut }) => {
-  console.log('user: ', user);
   const [toggleNavbar, setToggleNavbar] = React.useState(false);
   const navbarRef = React.useRef<HTMLElement>(null);
   const [title, setTitle] = React.useState('');

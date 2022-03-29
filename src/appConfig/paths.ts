@@ -1,16 +1,18 @@
-// const deployDomain = `/`;
-const deployDomain = `webadmin.taptapon.me-v2`;
+import { isEmpty } from 'src/validations';
+
+// const deployDomain = ``;
+const deployDomain = `/webadmin.taptapon.me-v2`;
 
 export const PATHS = {
-  root: `/${deployDomain}`,
-  dev: `/${deployDomain}/dev`,
-  signIn: `/${deployDomain}/sign-in`,
-  signUp: `/${deployDomain}/sign-up`,
+  root: isEmpty(deployDomain) ? `/` : `${deployDomain}`,
+  dev: `${deployDomain}/dev`,
+  signIn: `${deployDomain}/sign-in`,
+  signUp: `${deployDomain}/sign-up`,
 
-  home: `/${deployDomain}/home`,
-  overview: `/${deployDomain}/overview`,
-  users: `/${deployDomain}/users`,
+  home: `${deployDomain}/home`,
+  overview: `${deployDomain}/overview`,
+  users: `${deployDomain}/users`,
 
-  ordersManagement: `/${deployDomain}/orders-management`,
-  myProfile: `/${deployDomain}/me`,
+  orders: `${deployDomain}/orders`,
+  myProfile: `${deployDomain}/me`,
 };

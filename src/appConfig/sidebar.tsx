@@ -20,9 +20,9 @@ export type MenuType = {
 export const SidebarMenu: MenuType[] = [
   { title: 'Dashboard', icon: <FaHome />, href: PATHS.home },
   {
-    title: 'Order Management',
+    title: 'Orders Management',
     icon: <AiOutlinePieChart />,
-    href: PATHS.ordersManagement,
+    href: PATHS.orders,
   },
   { title: 'User Management', icon: <FaUsersCog />, href: PATHS.users },
 ];

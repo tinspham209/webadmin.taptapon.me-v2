@@ -90,6 +90,26 @@ const create = (baseURL = appConfig.API_URL) => {
 
   // ====================== END User Info ======================
 
+  // ====================== Orders ======================
+
+  const getOrders = async () => {
+    try {
+      const dbUser = await fireStore.collection(DB_COLLECTION.ORDERS).get();
+      const data = dbUser.docs.map((doc, index) => {
+        return {
+          ...doc.data(),
+          id: doc.id,
+        };
+      });
+      return data;
+    } catch (error) {
+      console.log('error: ', error);
+      return error;
+    }
+  };
+
+  // ====================== END Orders ======================
+
   //
   // Return back a collection of functions that we would consider our
   // interface.  Most of the time it'll be just the list of all the
@@ -111,6 +131,10 @@ const create = (baseURL = appConfig.API_URL) => {
     // ====================== User Info ======================
     getUserInfo,
     // ====================== END User Info ======================
+
+    // ====================== Orders ======================
+    getOrders,
+    // ====================== END Orders ======================
   };
 };
 
