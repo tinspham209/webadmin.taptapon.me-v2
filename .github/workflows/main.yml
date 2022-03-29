@@ -25,18 +25,6 @@ jobs:
           cd build
           cp index.html 200.html
 
-      # - name: deploy to gh-pages
-      #   run: |
-      #     git config --global user.name $user_name
-      #     git config --global user.email $user_email
-      #     git remote set-url origin https://${github_token}@github.com/${repository}
-      #     npm run deploy
-      #   env:
-      #     user_name: 'github-actions[bot]'
-      #     user_email: 'github-actions[bot]@users.noreply.github.com'
-      #     github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
-      #     repository: ${{ github.repository }}
-
       - name: deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
@@ -47,9 +35,7 @@ jobs:
         id: slack
         uses: slackapi/slack-github-action@v1.16.0
         with:
-          payload: '{"blocks":[{"type":"section","text":{"type":"mrkdwn","text":"You have a new request action: "}},{"type":"section","fields":[{"type":"mrkdwn","text":"*Action:* Deploy to PROD"},{"type":"mrkdwn","text":"*Status:* SUCCEEDED!"},{"type":"mrkdwn","text":"*Project:* taptapon.me-webadmin"}]}]}'
+          payload: '{"blocks":[{"type":"section","text":{"type":"mrkdwn","text":"You have a new request action: "}},{"type":"section","fields":[{"type":"mrkdwn","text":"*Action:* Deploy to PROD"},{"type":"mrkdwn","text":"*Status:* SUCCEEDED!"},{"type":"mrkdwn","text":"*Project:* webadmin.taptapon.me-v2"}]}]}'
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
-      # - name: Slack notification
-      #   run: curl -X POST -H 'Content-type: application/json' --data '{"text":"Deploy Webapp to prod. SUCCEEDED!"}' ${{ secrets.SLACK_CI_WEBHOOK_KEY }}
