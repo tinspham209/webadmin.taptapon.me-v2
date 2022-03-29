@@ -17,14 +17,20 @@ jobs:
       - uses: actions/checkout@master
       - name: install dependencies
         run: npm install --global yarn && yarn
-      - name: build
+      - name: run build
         run: npm run build
-      - name: Deploy to gh-pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          publish_dir: ./build
-      - name: Slack notification
+      - name: deploy to gh-pages
+        run: |
+          git config --global user.name $user_name
+          git config --global user.email $user_email
+          git remote set-url origin https://${github_token}@github.com/${repository}
+          npm run deploy
+        env:
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+          github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
+          repository: ${{ github.repository }}
+      - name: post notification to Slack
         id: slack
         uses: slackapi/slack-github-action@v1.16.0
         with:
