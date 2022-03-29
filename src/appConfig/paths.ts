@@ -1,4 +1,5 @@
-const deployDomain = `webadmin.taptapon.me-v2`;
+const deployDomain = `/`;
+// const deployDomain = `webadmin.taptapon.me-v2`;
 
 export const PATHS = {
   root: `/${deployDomain}`,
