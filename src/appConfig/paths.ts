@@ -1,15 +1,15 @@
+const deployDomain = `webadmin.taptapon.me-v2`;
+
 export const PATHS = {
-  root: '/',
-  dev: '/dev',
-  signIn: '/sign-in',
-  signUp: '/sign-up',
-  forgotPassword: '/forgot-password',
-  resetPassword: '/reset-password',
+  root: `/${deployDomain}`,
+  dev: `/${deployDomain}/dev`,
+  signIn: `/${deployDomain}/sign-in`,
+  signUp: `/${deployDomain}/sign-up`,
 
-  home: '/home',
-  overview: '/overview',
-  users: '/users',
+  home: `/${deployDomain}/home`,
+  overview: `/${deployDomain}/overview`,
+  users: `/${deployDomain}/users`,
 
-  ordersManagement: '/orders-management',
-  myProfile: '/me',
+  ordersManagement: `/${deployDomain}/orders-management`,
+  myProfile: `/${deployDomain}/me`,
 };
