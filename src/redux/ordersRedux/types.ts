@@ -1,12 +1,5 @@
 import { TableParams } from '../types';
 
-export type UserSocial = {
-  icon: string;
-  order: number;
-  title: string;
-  url: string;
-};
-
 export type FireStoreTimeType = {
   seconds: number;
   nanoseconds: number;
@@ -21,7 +14,10 @@ export type OrderDetail = {
   fbLink: string;
   name: string;
   phoneNumber: string;
-  id: string;
+  status: OrderStatus;
+  id?: string;
+  editBy?: string;
+  updatedTime?: string;
 };
 
 export type GetOrdersParams = TableParams;
@@ -33,4 +29,29 @@ export enum OrdersParamKey {
   FB_LINK = 'fbLink',
   NAME = 'name',
   PHONE_NUMBER = 'phoneNumber',
+  ID = 'id',
+  STATUS = 'status',
+  EDIT_BY = 'editBy',
+  UPDATED_TIME = 'updatedTime',
 }
+
+export type GetOrderPayload = {
+  uid: string;
+};
+
+export enum OrderStatus {
+  TODO = 'TODO',
+  DOING = 'DOING',
+  DONE = 'DONE',
+  INVALID = 'INVALID',
+  CANCEL = 'CANCEL',
+}
+
+export type EditOrderPayload = {
+  uid: string;
+  order: OrderDetail;
+  editInfo: {
+    editBy: string;
+    updatedTime: string;
+  };
+};

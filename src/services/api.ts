@@ -4,6 +4,7 @@ import appConfig from 'src/appConfig';
 import { DB_COLLECTION } from 'src/appConfig/fireStoreCollection';
 import { fireAuth, fireStore } from 'src/firebase';
 import { ChangePasswordPayload, SignInPayload, User } from 'src/redux/authRedux/types';
+import { EditOrderPayload, GetOrderPayload, OrderDetail } from 'src/redux/ordersRedux/types';
 import { GetUserInfoPayload, UserInfo } from 'src/redux/userRedux/types';
 import { TokenService } from '.';
 
@@ -108,6 +109,34 @@ const create = (baseURL = appConfig.API_URL) => {
     }
   };
 
+  const getOrder = async (params: GetOrderPayload) => {
+    const dbOrders = fireStore.collection(DB_COLLECTION.ORDERS);
+    try {
+      const snapshot = await dbOrders.doc(params.uid).get();
+      const data = snapshot.data() as OrderDetail;
+      return data;
+    } catch (error) {
+      console.log('error: ', error);
+      return error;
+    }
+  };
+
+  const editOrder = async (params: EditOrderPayload) => {
+    const dbOrders = fireStore.collection(DB_COLLECTION.ORDERS);
+    const { uid, order, editInfo } = params;
+    try {
+      await dbOrders.doc(uid).update({
+        ...order,
+        editBy: editInfo.editBy,
+        updatedTime: editInfo.updatedTime,
+      });
+      return uid;
+    } catch (error) {
+      console.log('error: ', error);
+      return error;
+    }
+  };
+
   // ====================== END Orders ======================
 
   //
@@ -134,6 +163,8 @@ const create = (baseURL = appConfig.API_URL) => {
 
     // ====================== Orders ======================
     getOrders,
+    getOrder,
+    editOrder,
     // ====================== END Orders ======================
   };
 };

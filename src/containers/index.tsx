@@ -11,6 +11,7 @@ import { IRootState } from 'src/redux/rootReducer';
 import { Navigator } from 'src/services';
 import Home from './Home';
 import OrdersContainer from './OrdersContainers';
+import OrderDetail from './OrdersContainers/OrderDetail';
 import MyProfile from './ProfileContainers/MyProfile';
 import LoadingContainer from './StartupContainers/LoadingContainer';
 import NotFound from './StartupContainers/NotFound';
@@ -32,6 +33,7 @@ const Routing: React.FC<{ location: Location }> = props => {
         <CustomRoute pageRequiredAuth exact path={PATHS.home} component={Home} />
         <CustomRoute pageRequiredAuth exact path={PATHS.myProfile} component={MyProfile} />
         <CustomRoute pageRequiredAuth exact path={PATHS.orders} component={OrdersContainer} />
+        <CustomRoute pageRequiredAuth exact path={`${PATHS.orders}/:id`} component={OrderDetail} />
 
         <Route component={NotFound} />
       </Switch>

@@ -2,9 +2,11 @@ import { MUIDataTableOptions } from 'mui-datatables';
 import React from 'react';
 import { connect } from 'react-redux';
 import { useHistory, useLocation } from 'react-router-dom';
+import { PATHS } from 'src/appConfig/paths';
 import { Table, View } from 'src/components/common';
 import { getOrdersAsync } from 'src/redux/ordersRedux/actions';
 import { IRootState } from 'src/redux/rootReducer';
+import { Navigator } from 'src/services';
 import { allColumns } from './allColumns';
 import { OrderQueryParams } from './helpers';
 
@@ -26,8 +28,7 @@ const Orders: React.FC<Props> = ({ loading, records, onGetOrders }) => {
   const handleRowClick = (_value: any, meta: { rowIndex: number }) => {
     const index = meta.rowIndex;
     const selectedRecord = records[index];
-    console.log('selectedRecord: ', selectedRecord.id);
-    // Navigator.navigate(`${PATHS.orders}/${selectedRecord.phoneNumber}`);
+    Navigator.navigate(`${PATHS.orders}/${selectedRecord.id}`);
   };
   const tableOptions: MUIDataTableOptions = React.useMemo(
     () => ({
