@@ -1,13 +1,15 @@
 
 # TapTapOn.me Webadmin
 
-- install dependencies
 
-```
-yarn
-```
-
+- install dependencies: `yarn`
 - create `./.env` file, same data with `./.env.dev` file
+- after that: `yarn start`
+### S.O.S
+
+in file: `src\appConfig\paths.ts`
+- In localhost: change `deployDomain` to `/`
+- When merge to branch `master` (deployment), pls make sure `deployDomain = 'webadmin.taptapon.me-v2'` 
 
 ### Commit
 
@@ -34,3 +36,13 @@ The `<type>` and `<summary>` fields are mandatory, the `(<scope>)` field is opti
 - `update(similarityReports): add updatedDate col in the report grid`
 - `fix(similarityReports): display correct message error`
 - `update(global): change css system`
+
+### Deployment
+- Manual:
+
+```
+  npm run deploy
+```
+
+- CI:
+  - push commit to branch `master`
