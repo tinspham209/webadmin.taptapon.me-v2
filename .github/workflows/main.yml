@@ -6,6 +6,7 @@ on:
   pull_request:
     branches:
       - master
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -35,7 +36,7 @@ jobs:
         id: slack
         uses: slackapi/slack-github-action@v1.16.0
         with:
-          payload: '{"blocks":[{"type":"section","text":{"type":"mrkdwn","text":"You have a new request action: "}},{"type":"section","fields":[{"type":"mrkdwn","text":"*Action:* Deploy to PROD"},{"type":"mrkdwn","text":"*Status:* SUCCEEDED!"},{"type":"mrkdwn","text":"*Project:* webadmin.taptapon.me-v2"}]}]}'
+          payload: '{"blocks":[{"type":"section","text":{"type":"mrkdwn","text":"You have a new request action: "}},{"type":"section","fields":[{"type":"mrkdwn","text":"*Action:* Deploy to PROD"},{"type":"mrkdwn","text":"*Status:* SUCCEEDED!"},{"type":"mrkdwn","text":"*Project:* webadmin.taptapon.me-v2"},{"type":"mrkdwn","text":"*Domain:* www.webadmin.taptapon.me"}]}]}'
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
