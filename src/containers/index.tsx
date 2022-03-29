@@ -25,7 +25,7 @@ const Routing: React.FC<{ location: Location }> = props => {
       <Navbar />
       <Sidebar />
       <Switch location={props.location}>
-        <Route path={PATHS.root} render={() => <Redirect to={PATHS.home} />} exact />
+        <Route path={PATHS.root} render={() => <Redirect to={PATHS.signIn} />} exact />
         <Route path={PATHS.signIn} component={Signin} />
 
         <CustomRoute pageRequiredAuth exact path={PATHS.home} component={Home} />

@@ -1,5 +1,5 @@
 {
-  "name": "taptapon.me-webadmin",
+  "name": "webadmin-taptapon.me",
   "version": "1.0.0",
   "private": true,
   "husky": {
@@ -7,7 +7,7 @@
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
-  "homepage": "https://tinspham209.github.io/taptapon.me-v2.webadmin/",
+  "homepage": "https://tinspham209.github.io/webadmin.taptapon.me-v2",
   "dependencies": {
     "@material-ui/core": "^4.11.3",
     "@material-ui/icons": "^4.11.2",
