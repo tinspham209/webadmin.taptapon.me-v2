@@ -11,12 +11,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@master
+      - name: Checkout code
+        uses: actions/checkout@v2.3.4
+
       - name: install dependencies
         run: npm install --global yarn && yarn
+
       - name: run build
         run: npm run build
-      - name: clone index.html into 200.html
+
+      - name: create file 200.html
         run: |
           cd build
           cp index.html 200.html
