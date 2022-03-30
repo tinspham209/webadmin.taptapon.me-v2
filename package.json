@@ -110,7 +110,7 @@
     "@commitlint/cli": "14.1.0",
     "@commitlint/config-conventional": "14.1.0",
     "@types/classnames": "2.3.1",
-    "@types/jest": "26.0.24",
+    "@types/jest": "27.4.1",
     "@types/lodash": "4.14.180",
     "@types/qs": "6.9.7",
     "@types/react-content-loader": "4.0.0",
