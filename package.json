@@ -14,7 +14,7 @@
     "@material-ui/lab": "4.0.0-alpha.57",
     "@steveeeie/react-page-transition": "1.2.1",
     "@testing-library/jest-dom": "5.16.3",
-    "@testing-library/react": "11.2.7",
+    "@testing-library/react": "12.1.4",
     "@testing-library/user-event": "12.8.3",
     "@types/history": "4.7.11",
     "@types/mui-datatables": "3.7.8",
