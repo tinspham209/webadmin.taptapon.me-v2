@@ -1,7 +1,7 @@
 import { isEmpty } from 'src/validations';
 
-// const deployDomain = ``;
-const deployDomain = `/webadmin.taptapon.me-v2`;
+const deployDomain = ``;
+// const deployDomain = `/webadmin.taptapon.me-v2`;
 
 export const PATHS = {
   root: isEmpty(deployDomain) ? `/` : `${deployDomain}`,
@@ -15,4 +15,5 @@ export const PATHS = {
 
   orders: `${deployDomain}/orders`,
   myProfile: `${deployDomain}/me`,
+  testAgGrid: `${deployDomain}/agGrid`,
 };

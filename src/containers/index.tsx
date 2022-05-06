@@ -9,6 +9,7 @@ import Sidebar from 'src/components/Sidebar';
 import { exchangeTokenAsync, setToken } from 'src/redux/authRedux/actions';
 import { IRootState } from 'src/redux/rootReducer';
 import { Navigator } from 'src/services';
+import AgGridTable from './AgGridContainer';
 import Home from './Home';
 import OrdersContainer from './OrdersContainers';
 import OrderDetail from './OrdersContainers/OrderDetail';
@@ -33,6 +34,7 @@ const Routing: React.FC<{ location: Location }> = props => {
         <CustomRoute pageRequiredAuth exact path={PATHS.home} component={Home} />
         <CustomRoute pageRequiredAuth exact path={PATHS.myProfile} component={MyProfile} />
         <CustomRoute pageRequiredAuth exact path={PATHS.orders} component={OrdersContainer} />
+        <CustomRoute pageRequiredAuth exact path={PATHS.testAgGrid} component={AgGridTable} />
         <CustomRoute pageRequiredAuth exact path={`${PATHS.orders}/:id`} component={OrderDetail} />
 
         <Route component={NotFound} />

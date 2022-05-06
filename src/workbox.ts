@@ -1,4 +1,4 @@
-import { Workbox, messageSW } from 'workbox-window';
+import { messageSW, Workbox } from 'workbox-window';
 import { WorkboxLifecycleEvent } from 'workbox-window/utils/WorkboxEvent';
 
 const isLocalhost = Boolean(

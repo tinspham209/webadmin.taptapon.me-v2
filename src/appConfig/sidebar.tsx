@@ -25,4 +25,5 @@ export const SidebarMenu: MenuType[] = [
     href: PATHS.orders,
   },
   { title: 'User Management', icon: <FaUsersCog />, href: PATHS.users },
+  { title: 'Ag Grid', icon: <FaUsersCog />, href: PATHS.testAgGrid },
 ];

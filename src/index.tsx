@@ -6,7 +6,6 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import MainAppNavigator from './containers';
 import createStore from './redux/store';
 import './scss/styles.scss';
-
 const { store, history } = createStore();
 
 ReactDOM.render(
