@@ -119,7 +119,7 @@
     "@types/url-join": "4.0.1",
     "@typescript-eslint/eslint-plugin": "4.33.0",
     "@typescript-eslint/parser": "4.33.0",
-    "babel-eslint": "10.1.0",
+    "@babel/eslint-parser": "7.11.0",
     "dotenv": "8.6.0",
     "eslint": "7.32.0",
     "eslint-config-react-app": "6.0.0",
