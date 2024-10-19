@@ -3869,7 +3869,12 @@
   resolved "https://registry.yarnpkg.com/@types/json5/-/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
   integrity sha1-7ihweulOEdK4J7y+UnC86n8+ce4=
 
-"@types/lodash@4.14.180", "@types/lodash@^4.14.175":
+"@types/lodash@4.17.12":
+  version "4.17.12"
+  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.17.12.tgz#25d71312bf66512105d71e55d42e22c36bcfc689"
+  integrity sha512-sviUmCE8AYdaF/KIHLDJBQgeYzPBI0vf/17NaYehBJfYD1j6/L95Slh07NlyK2iNyBNaEkb3En2jRt+a8y3xZQ==
+
+"@types/lodash@^4.14.175":
   version "4.14.180"
   resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.180.tgz#4ab7c9ddfc92ec4a887886483bc14c79fb380670"
   integrity sha512-XOKXa1KIxtNXgASAnwj7cnttJxS4fksBRywK/9LzRV5YxrF80BXZIGeQSuoESQ/VkUj30Ae0+YcuHc15wJCB2g==
@@ -4488,13 +4493,6 @@ adjust-sourcemap-loader@3.0.0:
   dependencies:
     loader-utils "^2.0.0"
     regex-parser "^2.2.11"
-
-ag-grid-react@^27.2.1:
-  version "27.2.1"
-  resolved "https://registry.yarnpkg.com/ag-grid-react/-/ag-grid-react-27.2.1.tgz#8391a922ac95d937e41b726b1222cd6697fb924e"
-  integrity sha512-MWYhi16CHltIojdnHjPp6U5TPsHQHVtX+gJqhEwNM7h55Iwe9NPFfoypBwz9kEyR7dSIL8pvMZ5O/nEeBBoxWA==
-  dependencies:
-    prop-types "^15.8.1"
 
 agent-base@6:
   version "6.0.2"
